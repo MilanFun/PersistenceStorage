@@ -52,7 +52,7 @@ public interface KeyValueStorage<K, V> extends Closeable {
     /**
      * Приводит хранилище на диске в консистентное состояние на момент вызова. Может блокировать другие операции записи.
      */
-    default void flush() {
+    default void flush() throws ClosedStorageException {
         throw new UnsupportedOperationException("Not implemented yet");
     }
 }
